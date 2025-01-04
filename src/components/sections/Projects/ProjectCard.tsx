@@ -1,21 +1,21 @@
 // src/components/sections/Projects/ProjectCard.tsx
-// Dibuat oleh: Habibi Ramadhan
-// Last update: [Tanggal terakhir update]
 'use client'
 
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Lock } from 'lucide-react';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   title: string;
   description: string;
-  type: string; // "AI Research" | "Backend" | "Frontend"
+  type: string;
   technologies: string[];
   githubUrl?: string;
   demoUrl?: string;
   isPrivate?: boolean;
   index: number;
   gradient: string;
+  image?: string;
 }
 
 const ProjectCard = ({ 
@@ -27,7 +27,8 @@ const ProjectCard = ({
   demoUrl,
   isPrivate = false,
   index, 
-  gradient 
+  gradient,
+  image
 }: ProjectCardProps) => {
   return (
     <motion.div
@@ -46,6 +47,21 @@ const ProjectCard = ({
 
       <div className="relative flex-1 p-8 bg-gray-900/90 backdrop-blur-xl rounded-2xl 
                     border border-purple-500/10 overflow-hidden">
+        {/* Project Image with Next.js Image optimization */}
+        {image && (
+          <div className="relative w-full h-48 mb-6 rounded-xl overflow-hidden">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover"
+              loading="lazy"
+              quality={75}
+            />
+          </div>
+        )}
+
         {/* Project Type Badge */}
         <div className="inline-block px-3 py-1 mb-4 text-sm rounded-full 
                       bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/20">

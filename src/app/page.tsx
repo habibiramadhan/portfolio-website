@@ -1,9 +1,23 @@
 // src/app/page.tsx
+import dynamic from 'next/dynamic';
 import Header from '@/components/layout/Header';
-import Hero from '@/components/sections/Hero/Hero';
-import Expertise from '@/components/sections/Expertise/Expertise';
-import Projects from '@/components/sections/Projects/Projects';
-import Contact from '@/components/sections/Contact/Contact';
+
+// Lazy load sections
+const Hero = dynamic(() => import('@/components/sections/Hero/Hero'), {
+  loading: () => <div className="min-h-screen bg-[#0B1121]" /> // Loading placeholder
+});
+
+const Expertise = dynamic(() => import('@/components/sections/Expertise/Expertise'), {
+  loading: () => <div className="min-h-screen bg-[#0B1121]" />
+});
+
+const Projects = dynamic(() => import('@/components/sections/Projects/Projects'), {
+  loading: () => <div className="min-h-screen bg-[#0B1121]" />
+});
+
+const Contact = dynamic(() => import('@/components/sections/Contact/Contact'), {
+  loading: () => <div className="min-h-screen bg-[#0B1121]" />
+});
 
 export default function Home() {
   return (
