@@ -59,41 +59,46 @@ const Hero = () => {
             </motion.h2>
 
             <motion.p 
-              className="mt-6 text-base sm:text-lg text-gray-300 max-w-lg mx-auto lg:mx-0"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+            className="mt-6 text-base sm:text-lg lg:text-xl font-light text-gray-300 max-w-lg mx-auto lg:mx-0"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Creating intelligent solutions through code, research, and innovation.
-              Specialized in AI development and scalable backend systems.
+            <span className="block text-purple-400 font-semibold">Creating Intelligent Solutions</span>
+            <span className="block mt-2 text-gray-300">
+                Through code, research, and innovation. Specialized in AI development and scalable backend systems.
+            </span>
             </motion.p>
+
+
 
             <SocialLinks />
 
             <motion.button
-              className="mt-8 sm:mt-12 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-blue-600 
-                       rounded-full text-base sm:text-lg font-medium group relative overflow-hidden shadow-md hover:shadow-lg"
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
-            >
-              <span className="relative z-10">Explore My Work</span>
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-purple-600/50 to-blue-600/50 
-                         opacity-0 group-hover:opacity-100 transition-opacity"
-                animate={{
-                  scale: [1, 1.5],
-                  rotate: [0, 360],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "linear"
-                }}
-              />
-            </motion.button>
+  className="mt-8 sm:mt-12 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-blue-600 
+                     rounded-full text-base sm:text-lg font-medium group relative overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.5 }}
+>
+  <span className="relative z-10">Explore My Work</span>
+  <motion.div
+    className="absolute inset-0 bg-gradient-to-r from-purple-500/40 to-blue-500/40 
+                         opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+    animate={{
+      scale: [1, 1.1, 1],
+      rotate: [0, 360],
+    }}
+    transition={{
+      duration: 5,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }}
+  />
+</motion.button>
+
           </motion.div>
         </div>
 

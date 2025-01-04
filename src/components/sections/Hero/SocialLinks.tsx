@@ -1,4 +1,3 @@
-// src/components/sections/Hero/SocialLinks.tsx
 'use client'
 
 import { Github, Linkedin, Mail } from 'lucide-react';
@@ -24,16 +23,16 @@ const SocialLinks = () => {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative p-3 sm:p-4 rounded-xl bg-white/5 hover:bg-white/10 backdrop-blur-sm group"
-          whileHover={{ scale: 1.1, rotate: 5 }}
+          className="relative p-3 sm:p-4 rounded-xl bg-gradient-to-r from-purple-700/80 to-blue-700/80 hover:from-blue-700/80 hover:to-purple-700/80 group shadow-md transition-all duration-300"
+          whileHover={{ scale: 1.1, rotate: 2 }}
           whileTap={{ scale: 0.95 }}
           aria-label={label}
         >
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-xl 
-                     blur opacity-0 group-hover:opacity-100 transition-opacity"
+            className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-xl 
+                     blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             animate={{
-              scale: [1, 1.2, 1],
+              scale: [1, 1.15, 1],
             }}
             transition={{
               duration: 2,
@@ -41,7 +40,7 @@ const SocialLinks = () => {
               ease: "easeInOut"
             }}
           />
-          <Icon className="relative z-10 w-5 h-5 sm:w-6 sm:h-6" />
+          <Icon className="relative z-10 w-6 h-6 text-gray-200" />
         </motion.a>
       ))}
     </motion.div>
