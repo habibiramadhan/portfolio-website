@@ -1,3 +1,4 @@
+// src/components/sections/Hero/SocialLinks.tsx
 'use client'
 
 import { Github, Linkedin, Mail } from 'lucide-react';

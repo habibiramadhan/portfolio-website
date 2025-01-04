@@ -1,3 +1,4 @@
+// src/components/sections/Hero/TypingEffect.tsx
 import React, { useState, useEffect } from 'react';
 
 const TypingEffect = ({ words }: { words: string[] }) => {

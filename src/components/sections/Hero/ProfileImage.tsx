@@ -1,3 +1,4 @@
+// src/components/sections/Hero/ProfileImage.tsx
 'use client'
 
 import { motion } from 'framer-motion';

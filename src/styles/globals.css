@@ -36,3 +36,15 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-600;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.section-transition {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent, #0B1121 15%, #0B1121 85%, transparent);
+}
