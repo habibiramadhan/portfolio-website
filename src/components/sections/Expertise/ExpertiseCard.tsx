@@ -4,16 +4,18 @@
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
 
+// Props yang dibutuhin sama komponen
 interface ExpertiseCardProps {
-  title: string;
-  description: string;
-  icon: LucideIcon;
-  technologies: string[];
-  index: number;
-  gradient: string;
+  title: string;        // Judul expertise
+  description: string;  // Deskripsi lengkap
+  icon: LucideIcon;     // Icon dari lucide-react
+  technologies: string[]; // List teknologi yang dipake
+  index: number;        // Urutan card buat animasi
+  gradient: string;     // Gradient warna background
 }
 
 const ExpertiseCard = ({ title, description, icon: Icon, technologies, index, gradient }: ExpertiseCardProps) => {
+  // Setup animasi buat card-nya
   const cardVariants = {
     hidden: { 
       opacity: 0,
@@ -33,6 +35,7 @@ const ExpertiseCard = ({ title, description, icon: Icon, technologies, index, gr
     }
   };
 
+  // Setup animasi buat tech stack
   const techVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: (i: number) => ({
@@ -47,6 +50,7 @@ const ExpertiseCard = ({ title, description, icon: Icon, technologies, index, gr
   };
 
   return (
+    // Wrapper card dengan animasi
     <motion.div
       variants={cardVariants}
       initial="hidden"
@@ -54,11 +58,12 @@ const ExpertiseCard = ({ title, description, icon: Icon, technologies, index, gr
       viewport={{ once: true, margin: "-50px" }}
       className="relative group"
     >
-      {/* Card Background with Gradient */}
+      {/* Background gradient yang blur */}
       <div className={`absolute inset-0 bg-gradient-to-r ${gradient} rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-500`} />
 
+      {/* Konten utama card */}
       <div className="relative p-8 bg-gray-900/90 backdrop-blur-xl rounded-2xl border border-purple-500/10 h-full">
-        {/* Icon and Title */}
+        {/* Icon dan judul */}
         <div className="flex items-center gap-4 mb-6">
           <div className={`p-3 rounded-xl bg-gradient-to-r ${gradient} backdrop-blur-md`}>
             <Icon className="w-6 h-6 text-white" />
@@ -68,11 +73,12 @@ const ExpertiseCard = ({ title, description, icon: Icon, technologies, index, gr
           </h3>
         </div>
         
+        {/* Deskripsi */}
         <p className="text-gray-300 mb-8 leading-relaxed">
           {description}
         </p>
 
-        {/* Technologies */}
+        {/* List teknologi dengan animasi */}
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, i) => (
             <motion.span

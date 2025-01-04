@@ -1,6 +1,10 @@
 // src/components/sections/Hero/Hero.tsx
 'use client'
 
+// Komponen Hero - Bagian utama website yang pertama kali dilihat user
+// Dibuat oleh: Habibi Ramadhan
+// Last update: [Tanggal terakhir update]
+
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import ParticleEffect from './ParticleEffect';
@@ -69,8 +73,6 @@ const Hero = () => {
                 Through code, research, and innovation. Specialized in AI development and scalable backend systems.
             </span>
             </motion.p>
-
-
 
             <SocialLinks />
 

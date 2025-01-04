@@ -1,4 +1,6 @@
 // src/components/sections/Hero/TypingEffect.tsx
+// Dibuat oleh: Habibi Ramadhan
+// Last update: [Tanggal terakhir update]
 import React, { useState, useEffect } from 'react';
 
 const TypingEffect = ({ words }: { words: string[] }) => {

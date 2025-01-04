@@ -4,14 +4,17 @@
 import { motion } from 'framer-motion';
 import { Mail, Github, Linkedin, Send } from 'lucide-react';
 
+// Komponen utama Contact
 const Contact = () => {
   return (
+    // Section dengan background gelap dan overflow hidden buat gradient
     <section className="relative py-32 min-h-screen overflow-hidden bg-[#0B1121]">
-      {/* Background Gradients */}
+      {/* Background gradient buat efek visual */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0B1121]/50 via-gray-900/80 to-[#0B1121]/90" />
       
-      {/* Animated Gradients */}
+      {/* Gradient yang bergerak pake framer-motion */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Gradient ungu yang bergerak */}
         <motion.div
           className="absolute top-1/4 -right-48 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
           animate={{
@@ -24,6 +27,7 @@ const Contact = () => {
             ease: "easeInOut"
           }}
         />
+        {/* Gradient biru yang bergerak */}
         <motion.div
           className="absolute bottom-1/4 -left-48 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
           animate={{
@@ -39,8 +43,9 @@ const Contact = () => {
         />
       </div>
 
+      {/* Container utama */}
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
+        {/* Header section dengan animasi */}
         <div className="text-center mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -51,6 +56,7 @@ const Contact = () => {
             Get In Touch
           </motion.h2>
 
+          {/* Garis pemisah dengan animasi */}
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -58,6 +64,7 @@ const Contact = () => {
             className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-6"
           />
 
+          {/* Deskripsi dengan animasi */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,17 +75,18 @@ const Contact = () => {
           </motion.p>
         </div>
 
-        {/* Contact Content */}
+        {/* Grid layout buat konten kontak */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Contact Info */}
+          {/* Bagian info kontak */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
-            {/* Contact Methods */}
+            {/* List metode kontak */}
             <div className="space-y-6">
+              {/* Link email */}
               <a href="mailto:your@email.com" 
                 className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 
                          border border-purple-500/10 hover:border-purple-500/20 transition-all duration-300"
@@ -90,7 +98,7 @@ const Contact = () => {
                 </div>
               </a>
 
-              {/* Social Links */}
+              {/* Tombol sosmed dengan animasi hover */}
               <div className="flex gap-4">
                 {[
                     { 
@@ -133,7 +141,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Form kontak dengan animasi */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -141,6 +149,7 @@ const Contact = () => {
           >
             <form className="space-y-6">
               <div className="space-y-4">
+                {/* Input nama */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -155,6 +164,7 @@ const Contact = () => {
                   />
                 </motion.div>
 
+                {/* Input email */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -169,6 +179,7 @@ const Contact = () => {
                   />
                 </motion.div>
 
+                {/* Text area pesan */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -184,6 +195,7 @@ const Contact = () => {
                 </motion.div>
               </div>
 
+              {/* Tombol submit dengan animasi */}
               <motion.button
                 type="submit"
                 whileHover={{ scale: 1.02 }}

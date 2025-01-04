@@ -1,4 +1,6 @@
 // src/components/sections/Hero/ProfileImage.tsx
+// Dibuat oleh: Habibi Ramadhan
+// Last update: [Tanggal terakhir update]
 'use client'
 
 import { motion } from 'framer-motion';

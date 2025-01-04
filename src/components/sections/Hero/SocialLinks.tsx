@@ -1,4 +1,6 @@
 // src/components/sections/Hero/SocialLinks.tsx
+// Dibuat oleh: Habibi Ramadhan
+// Last update: [Tanggal terakhir update]
 'use client'
 
 import { Github, Linkedin, Mail } from 'lucide-react';

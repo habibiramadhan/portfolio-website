@@ -1,4 +1,6 @@
 // src/components/sections/Hero/ParticleEffect.tsx
+// Dibuat oleh: Habibi Ramadhan
+// Last update: [Tanggal terakhir update]
 'use client';
 
 import React, { useEffect, useRef } from 'react';

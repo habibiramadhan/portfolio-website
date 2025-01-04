@@ -6,6 +6,7 @@ import { motion, useScroll } from 'framer-motion';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
+// Data navigasi - gampang buat nambah/kurangin menu
 const navigation = [
   { name: 'Home', href: '#home' },
   { name: 'Expertise', href: '#expertise' },
@@ -19,14 +20,14 @@ const Header = () => {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll effect for header background
+  // Ngatur efek background header pas scroll
   useEffect(() => {
     return scrollY.onChange((latest) => {
       setIsScrolled(latest > 0);
     });
   }, [scrollY]);
 
-  // Handle intersection observer for sections
+  // Setup intersection observer buat detect section yang aktif
   useEffect(() => {
     const options = {
       root: null,
@@ -42,7 +43,7 @@ const Header = () => {
       });
     }, options);
 
-    // Observe all sections
+    // Observe semua section yang ada
     navigation.forEach(({ name }) => {
       const element = document.getElementById(name.toLowerCase());
       if (element) observer.observe(element);
@@ -56,11 +57,11 @@ const Header = () => {
     };
   }, []);
 
-  // Smooth scroll function
+  // Fungsi buat scroll halus ke section yang dipilih
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80; // Height of header
+      const offset = 80; // Tinggi header
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -94,7 +95,7 @@ const Header = () => {
             HR
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Navigasi Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
@@ -122,7 +123,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Right Side Items */}
+          {/* Tombol Contact di Desktop */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="#contact"
@@ -137,7 +138,7 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Tombol Menu Mobile */}
           <button
             className="md:hidden p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -151,7 +152,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Menu Mobile */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: isMenuOpen ? 1 : 0, y: isMenuOpen ? 0 : -20 }}

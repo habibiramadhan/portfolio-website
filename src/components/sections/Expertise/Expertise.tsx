@@ -12,7 +12,7 @@ const expertiseData = [
         icon: Brain,
         technologies: [
           "Generative AI",
-          "RAG Systems",
+          "RAG Systems", 
           "AI Vision",
           "AI Voice",
           "Multi Agent",
@@ -28,7 +28,7 @@ const expertiseData = [
     gradient: "from-blue-500/20 via-indigo-400/20 to-purple-500/20"
   },
   {
-    title: "Frontend Development",
+    title: "Frontend Development", 
     description: "Creating responsive and interactive web applications with modern frameworks.",
     icon: Code,
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Laravel"],
@@ -38,12 +38,14 @@ const expertiseData = [
 
 const Expertise = () => {
   return (
+    // Section utama dengan background gelap dan overflow hidden buat gradient
     <section className="relative py-32 min-h-screen overflow-hidden bg-[#0B1121]">
-      {/* Background Gradients */}
+      {/* Overlay gradient buat background */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-gray-900/80 to-[#0B1121]/90" />
       
-      {/* Animated Gradient Orbs */}
+      {/* Buat gradient orb yang bergerak-gerak di background */}
       <div className="absolute inset-0 overflow-hidden">
+        {/* Orb ungu di kanan atas */}
         <motion.div
           className="absolute -top-1/4 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
           animate={{
@@ -57,6 +59,7 @@ const Expertise = () => {
             ease: "easeInOut"
           }}
         />
+        {/* Orb biru di kiri tengah */}
         <motion.div
           className="absolute top-1/3 -left-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
           animate={{
@@ -71,6 +74,7 @@ const Expertise = () => {
             delay: 2
           }}
         />
+        {/* Orb pink di kanan bawah */}
         <motion.div
           className="absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl"
           animate={{
@@ -86,10 +90,11 @@ const Expertise = () => {
         />
       </div>
 
-      {/* Main Content */}
+      {/* Konten utama */}
       <div className="container mx-auto px-4 relative z-10">
-        {/* Header Section */}
+        {/* Bagian header dengan judul dan deskripsi */}
         <div className="text-center mb-20">
+          {/* Judul dengan animasi fade up */}
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -99,6 +104,7 @@ const Expertise = () => {
             My Expertise
           </motion.h2>
 
+          {/* Garis pemisah dengan animasi scale */}
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
@@ -106,6 +112,7 @@ const Expertise = () => {
             className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mt-6"
           />
 
+          {/* Deskripsi dengan animasi fade up */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,13 +123,14 @@ const Expertise = () => {
           </motion.p>
         </div>
 
-        {/* Cards Grid */}
+        {/* Grid buat nampung card expertise */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10"
         >
+          {/* Mapping data expertise ke komponen ExpertiseCard */}
           {expertiseData.map((expertise, index) => (
             <ExpertiseCard 
               key={expertise.title}
