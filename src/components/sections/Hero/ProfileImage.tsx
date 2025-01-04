@@ -1,4 +1,3 @@
-// src/components/sections/Hero/ProfileAnimation.tsx
 'use client'
 
 import { motion } from 'framer-motion';
@@ -11,61 +10,45 @@ const ProfileAnimation = () => {
       className="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[440px] mx-auto"
     >
       <div className="relative aspect-square">
-        {/* SVG Network Grid with Subtle Animation */}
-        <motion.svg
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
+        {/* Core Circle */}
+        <motion.div 
+          className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-3xl shadow-2xl"
           animate={{
+            scale: [1, 1.1, 1],
             rotate: [0, 360],
-            scale: [1, 1.05, 1],
           }}
           transition={{
-            duration: 30,
+            duration: 15,
             repeat: Infinity,
             ease: "linear"
           }}
-        >
-          <defs>
-            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-              <path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(128, 90, 213, 0.2)" strokeWidth="0.5" />
-            </pattern>
-          </defs>
-          <rect width="100" height="100" fill="url(#grid)" />
-        </motion.svg>
+        />
 
-        {/* Floating AI Symbols with Smooth Animation */}
-        {['<AI>', '</>', '{ML}', '[IoT]', '&&'].map((symbol, i) => (
+        {/* Animated Rings */}
+        {[...Array(3)].map((_, i) => (
           <motion.div
-            key={`symbol-${i}`}
-            className="absolute text-blue-400/60 font-mono text-xl"
-            initial={{ opacity: 0 }}
+            key={i}
+            className="absolute inset-0 rounded-full border-2 border-purple-500/10"
             animate={{
-              opacity: [0, 1, 0],
-              y: [-10, 0, 10],
-              x: [-10, 0, 10],
+              scale: [1, 1.2, 1],
+              rotate: [0, 180, 360],
+              opacity: [0.1, 0.3, 0.1]
             }}
             transition={{
-              duration: 4,
+              duration: 6,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: i * 0.6
+              delay: i * 0.5
             }}
-            style={{
-              left: `${30 + (i * 15)}%`,
-              top: `${40 + (i * 10)}%`
-            }}
-          >
-            {symbol}
-          </motion.div>
+          />
         ))}
 
-        {/* Center Glow with Pulsating Effect */}
+        {/* Center Glow */}
         <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 bg-purple-500/20 rounded-full blur-2xl shadow-inner"
           animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.3, 0.5, 0.3]
+            scale: [1, 1.5, 1],
+            opacity: [0.4, 0.8, 0.4]
           }}
           transition={{
             duration: 5,
@@ -74,20 +57,46 @@ const ProfileAnimation = () => {
           }}
         />
 
-        {/* Background Decorative Elements with Subtle Movement */}
-        <motion.div
-          className="absolute -z-10 w-full h-full bg-gradient-to-r from-blue-500/5 to-purple-500/5 blur-3xl"
-          animate={{
-            scale: [1, 1.1, 1],
-            rotate: [0, 180, 360],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
+        {/* Code Symbols Animation */}
+        {['{ }', '< >', '[ ]', '// ', '$ _'].map((symbol, i) => (
+          <motion.div
+            key={`symbol-${i}`}
+            className="absolute text-purple-400/40 font-mono text-lg lg:text-xl"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: [0, 1, 0],
+              y: [-20, 0, 20],
+              x: [-20, 0, 20],
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 0.7
+            }}
+            style={{
+              left: `${25 + (i * 12)}%`,
+              top: `${30 + (i * 8)}%`
+            }}
+          >
+            {symbol}
+          </motion.div>
+        ))}
       </div>
+
+      {/* Background Decorative Elements */}
+      <motion.div
+        className="absolute -z-10 w-full h-full bg-gradient-to-r from-purple-500/10 to-blue-500/10 blur-3xl"
+        animate={{
+          scale: [1, 1.1, 1],
+          rotate: [0, 360],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      />
     </motion.div>
   );
 };

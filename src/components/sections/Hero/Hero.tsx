@@ -4,7 +4,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import ParticleEffect from './ParticleEffect';
-
 import SocialLinks from './SocialLinks';
 import ProfileAnimation from './ProfileImage';
 import TypingEffect from './TypingEffect';
@@ -16,7 +15,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 py-12 sm:py-20 relative z-10">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-        <ProfileAnimation />
+          <ProfileAnimation />
 
           <motion.div 
             className="text-center lg:text-left mt-8 lg:mt-0"
@@ -73,8 +72,8 @@ const Hero = () => {
 
             <motion.button
               className="mt-8 sm:mt-12 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-blue-600 
-                       rounded-full text-base sm:text-lg font-medium group relative overflow-hidden"
-              whileHover={{ scale: 1.05 }}
+                       rounded-full text-base sm:text-lg font-medium group relative overflow-hidden shadow-md hover:shadow-lg"
+              whileHover={{ scale: 1.08 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -99,18 +98,18 @@ const Hero = () => {
         </div>
 
         <motion.div 
-        className="hidden sm:block fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50"
-        animate={{
+          className="hidden sm:block fixed bottom-10 left-1/2 transform -translate-x-1/2 z-50"
+          animate={{
             y: [0, 10, 0],
             opacity: [0.5, 1, 0.5],
-        }}
-        transition={{
+          }}
+          transition={{
             duration: 2,
             repeat: Infinity,
             ease: "easeInOut"
-        }}
+          }}
         >
-        <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-purple-400/80 hover:text-purple-400 transition-colors cursor-pointer" />
+          <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-purple-400/80 hover:text-purple-400 transition-colors cursor-pointer" />
         </motion.div>
       </div>
     </section>
