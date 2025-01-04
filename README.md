@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Website Portofolio Habibi Ramadhan
 
-## Getting Started
+Selamat datang di website portofolio saya! Ini adalah proyek yang dibangun menggunakan [Next.js](https://nextjs.org), sebuah framework React yang kuat untuk membangun aplikasi web modern.
 
-First, run the development server:
+## Tentang Proyek
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Website ini dirancang untuk menampilkan karya dan pengalaman saya sebagai pengembang web. Anda dapat menemukan informasi tentang proyek-proyek yang telah saya kerjakan, keterampilan yang saya miliki, dan cara untuk menghubungi saya.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Memulai
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Untuk melihat website ini secara lokal, Anda dapat menjalankan server pengembangan dengan langkah-langkah berikut:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Clone repositori ini** ke komputer Anda.
+2. **Instal dependensi** dengan menjalankan perintah:
+   ```bash
+   npm install
+   # atau
+   yarn install
+   ```
+3. **Jalankan server pengembangan** dengan perintah:
+   ```bash
+   npm run dev
+   # atau
+   yarn dev
+   ```
 
-## Learn More
+Buka [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat hasilnya.
 
-To learn more about Next.js, take a look at the following resources:
+## Fitur
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Desain Responsif**: Website ini dirancang agar terlihat baik di berbagai perangkat, dari desktop hingga ponsel.
+- **Animasi Halus**: Menggunakan `framer-motion` untuk memberikan animasi yang menarik dan interaktif.
+- **Navigasi Mudah**: Menu navigasi yang intuitif untuk memudahkan eksplorasi konten.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Struktur Proyek
 
-## Deploy on Vercel
+- `src/app`: Berisi komponen utama aplikasi.
+- `src/components`: Berisi komponen UI yang dapat digunakan kembali.
+- `src/hooks`: Berisi custom hooks.
+- `src/styles`: Berisi file CSS global.
+- `public`: Berisi aset publik seperti gambar dan ikon.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Kontribusi
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Saya sangat terbuka untuk masukan dan saran. Jika Anda ingin berkontribusi pada proyek ini, silakan buat pull request atau buka issue di repositori ini.
+
+## Kontak
+
+Jika Anda ingin menghubungi saya, silakan kirim email ke [habibiramadhan.dev@gmail.com](mailto:habibiramadhan.dev@gmail.com) atau kunjungi halaman kontak di website ini.
+
+## Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
