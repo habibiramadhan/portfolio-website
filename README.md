@@ -1,53 +1,80 @@
-# Website Portofolio Habibi Ramadhan
+# Habibi Ramadhan | Portfolio Website
 
-Selamat datang di website portofolio saya! Ini adalah proyek yang dibangun menggunakan [Next.js](https://nextjs.org), sebuah framework React yang kuat untuk membangun aplikasi web modern.
+Welcome to my professional portfolio website! This platform is built using [Next.js](https://nextjs.org), a cutting-edge React framework, to highlight my expertise in **Backend Development** and **AI Research**.
 
-## Tentang Proyek
+---
 
-Website ini dirancang untuk menampilkan karya dan pengalaman saya sebagai pengembang web. Anda dapat menemukan informasi tentang proyek-proyek yang telah saya kerjakan, keterampilan yang saya miliki, dan cara untuk menghubungi saya.
+## 🚀 About the Project
 
-## Memulai
+This website serves as a digital showcase of my journey, projects, and skills as a tech professional. Here, you'll find:
 
-Untuk melihat website ini secara lokal, Anda dapat menjalankan server pengembangan dengan langkah-langkah berikut:
+- **Innovative Projects**: Explore my contributions to backend systems and AI-driven applications.
+- **Technical Expertise**: A detailed overview of my skills and core competencies.
+- **Collaborative Opportunities**: Insights into my approach to solving complex problems through technology.
 
-1. **Clone repositori ini** ke komputer Anda.
-2. **Instal dependensi** dengan menjalankan perintah:
+---
+
+## 🛠️ Getting Started
+
+To explore this project locally, follow these simple steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/yourrepository.git
+   cd yourrepository
+   ```
+2. **Install Dependencies**:
    ```bash
    npm install
-   # atau
+   # or
    yarn install
    ```
-3. **Jalankan server pengembangan** dengan perintah:
+3. **Run the Development Server**:
    ```bash
    npm run dev
-   # atau
+   # or
    yarn dev
    ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
-Buka [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat hasilnya.
+---
 
-## Fitur
+## ✨ Key Features
 
-- **Desain Responsif**: Website ini dirancang agar terlihat baik di berbagai perangkat, dari desktop hingga ponsel.
-- **Animasi Halus**: Menggunakan `framer-motion` untuk memberikan animasi yang menarik dan interaktif.
-- **Navigasi Mudah**: Menu navigasi yang intuitif untuk memudahkan eksplorasi konten.
+- **Modern & Responsive Design**: Optimized for all screen sizes, from desktop to mobile devices.
+- **Smooth User Experience**: Leveraging `framer-motion` for professional-grade animations and transitions.
+- **Backend Expertise Showcase**: Insights into robust, scalable server architectures.
+- **AI-Driven Highlights**: Demonstrating practical implementations of AI and machine learning models.
+- **Seamless Navigation**: User-friendly interface for intuitive exploration.
 
-## Struktur Proyek
+---
 
-- `src/app`: Berisi komponen utama aplikasi.
-- `src/components`: Berisi komponen UI yang dapat digunakan kembali.
-- `src/hooks`: Berisi custom hooks.
-- `src/styles`: Berisi file CSS global.
-- `public`: Berisi aset publik seperti gambar dan ikon.
+## 🧩 Project Structure
 
-## Kontribusi
+Here is an organized overview of the project:
 
-Saya sangat terbuka untuk masukan dan saran. Jika Anda ingin berkontribusi pada proyek ini, silakan buat pull request atau buka issue di repositori ini.
+- `src/app`: Core application logic and configurations.
+- `src/components`: Modular, reusable UI components.
+- `src/hooks`: Custom hooks for advanced state and logic management.
+- `src/styles`: Centralized styling files, including global CSS.
+- `public`: Static assets like images, icons, and meta files.
 
-## Kontak
+---
 
-Jika Anda ingin menghubungi saya, silakan kirim email ke [habibiramadhan.dev@gmail.com](mailto:habibiramadhan.dev@gmail.com) atau kunjungi halaman kontak di website ini.
+## 📬 Contact Me
 
-## Lisensi
+Let’s connect! Reach out for collaborations or inquiries:
 
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+- **Email**: [habibiramadhan.dev@gmail.com](mailto:habibiramadhan.dev@gmail.com)
+- **LinkedIn**: [Habibi Ramadhan](#)
+- **GitHub**: [@habibiramadhan](#)
+
+---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+Thank you for visiting my portfolio! Together, let’s shape the future with innovative technology and groundbreaking ideas.
